@@ -6,6 +6,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 const About = () => {
   return (
     <div>
+      hello
       <Typography
         fontFamily="Poppins"
         fontWeight="bold"
