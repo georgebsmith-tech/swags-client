@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import About from "../components/about/about";
 import Container from "../components/container";
+import Services from "../components/services/services";
+import WhyUs from "../components/why_us/why_us";
 import styles from "../styles/Home.module.css";
 import Landing from "./landing";
 
@@ -27,6 +29,12 @@ export default function Home() {
           </Container>
           <Container style={{ borderTop: "106px" }}>
             <About />
+          </Container>
+          <Container style={{ borderTop: "106px" }}>
+            <Services />
+          </Container>
+          <Container style={{ borderTop: "106px", background: "#DDE5F7" }}>
+            <WhyUs />
           </Container>
         </main>
         <Container style={{ borderTop: "0", background: "red" }}>

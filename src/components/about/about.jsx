@@ -8,6 +8,7 @@ const About = () => {
     <div>
       <Typography
         fontFamily="Poppins"
+        fontWeight="bold"
         sx={{ color: "#0EE8B2", display: "flex", alignItems: "center" }}
       >
         About Us

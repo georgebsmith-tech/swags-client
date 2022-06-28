@@ -1,0 +1,14 @@
+.choiceParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 159px;
+    height: 136px;
+    min-height: fit-content;
+}
+
+.choiceParent img {
+    max-width: 45px;
+}
