@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="168.072" height="129.288" viewBox="0 0 168.072 129.288">
+  <defs>
+    <filter id="Rectangle_13" x="0" y="0" width="168.072" height="127.801" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="13.5" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polygon_1" x="18.942" y="68.757" width="64.884" height="60.53" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="9" result="blur-2"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_89" data-name="Group 89" transform="translate(-218.345 -1691.095)">
+    <g id="chatbox" transform="translate(258.845 1729.595)">
+      <g transform="matrix(1, 0, 0, 1, -40.5, -38.5)" filter="url(#Rectangle_13)">
+        <rect id="Rectangle_13-2" data-name="Rectangle 13" width="87.072" height="46.801" rx="11" transform="translate(40.5 38.5)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -40.5, -38.5)" filter="url(#Polygon_1)">
+        <path id="Polygon_1-2" data-name="Polygon 1" d="M5.442,0l5.442,6.53H0Z" transform="translate(56.83 91.29) rotate(180)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="_50_" data-name="50+" transform="translate(268 1752)" font-size="18" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">50+</tspan></text>
+    <text id="Years_Experience" data-name="Years Experience" transform="translate(268 1763)" font-size="8" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Years Experience</tspan></text>
+  </g>
+</svg>

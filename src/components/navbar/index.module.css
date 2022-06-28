@@ -1,0 +1,13 @@
+.navParent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+    border: red 2px solid;
+}
+
+.child1 img {
+    width: 27px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
