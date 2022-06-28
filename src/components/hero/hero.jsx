@@ -34,12 +34,14 @@ const Hero = () => {
         <Button
           variant="contained"
           sx={{
-            width: 200,
+            // width: 200,
             backgroundColor: "#000000",
             color: "whitesmoke",
-            height: 63,
+            // height: 63,
             borderRadius: 60,
+            padding: "16px 28px",
           }}
+          // fontSize={14}
         >
           Quick Laundry
         </Button>
