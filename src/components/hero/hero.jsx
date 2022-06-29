@@ -1,7 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import React from "react";
 import styles from "./hero.module.css";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 const Hero = () => {
   return (
