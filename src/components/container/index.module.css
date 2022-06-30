@@ -1,6 +1,13 @@
 .container {
   box-sizing: border-box;
-  padding: 2em 1.6em;
-  /* width: 20px; */
-  /* background-color: blue; */
+  padding: 2em 0.6em;
+}
+
+@media screen and (min-width:348px) {
+  .container {
+    box-sizing: border-box;
+    padding: 2em 1.6em;
+    /* width: 20px; */
+    /* background-color: blue; */
+  }
 }

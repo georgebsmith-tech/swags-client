@@ -1,11 +1,13 @@
 .pic1 {
     margin-top: 63px;
     position: relative;
+    /* border: red 2px solid; */
 
 }
 
 .pic1 img:nth-child(1) {
     position: absolute;
-    right: -50px;
-    top: -30px;
+    right: 0px;
+    top: 0px;
+    /* border: blue 2px solid; */
 }

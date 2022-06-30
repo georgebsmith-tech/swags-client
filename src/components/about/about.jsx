@@ -2,26 +2,14 @@ import { Button, Typography } from "@mui/material";
 import React from "react";
 import style from "./about.module.css";
 import RemoveIcon from "@mui/icons-material/Remove";
+import CustomBtn from "../customBtn/customBtn";
+import SectionHeader from "../section_header/section_header";
 
 const About = () => {
   return (
     <div>
-      hello
-      <Typography
-        fontFamily="Poppins"
-        fontWeight="bold"
-        sx={{ color: "#0EE8B2", display: "flex", alignItems: "center" }}
-      >
-        About Us
-        <div
-          style={{
-            backgroundColor: "#0EE8B2",
-            width: "31.5px",
-            height: "3px",
-            marginLeft: "10px",
-          }}
-        ></div>
-      </Typography>
+      <SectionHeader title="About Us" />
+
       <Typography fontFamily="Poppins" fontWeight="bold" variant="h5">
         Customer Centric <br />
         Laundry Company.
@@ -80,22 +68,11 @@ const About = () => {
         <img src="./images/check.svg" alt="" />
         Speed Delivery
       </Typography>
-      <Button
-        variant="contained"
-        sx={{
-          width: 200,
-          backgroundColor: "#000000",
-          color: "whitesmoke",
-          height: 63,
-          borderRadius: 60,
-          marginTop: "20px",
-        }}
-      >
-        Schedule Laundry
-      </Button>
+      <CustomBtn style={{ marginTop: "20px" }}>Schedule Laundry</CustomBtn>
+
       <div className={style.pic1}>
-        <img src="./images/Group89.svg" alt="" id="exp" />
-        <img src="./images/Group88.png" alt="" />
+        <img src="./images/Group89.png" alt="" id="exp" width="40%" />
+        <img src="./images/Group88.png" alt="" width="100%" />
       </div>
     </div>
   );

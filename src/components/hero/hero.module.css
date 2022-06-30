@@ -6,4 +6,8 @@
 .btngroup {
     margin-top: 55px;
     margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+
+
 }

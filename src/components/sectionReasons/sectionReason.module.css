@@ -1,0 +1,16 @@
+.imgholder {
+    /* border: rebeccapurple 2px solid; */
+    padding: 6.6px 9.6px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 1;
+}
+
+.parent {
+    display: flex;
+    column-gap: 23px;
+    align-items: center;
+    margin-top: 10px;
+    /* border: red solid 2px; */
+    text-align: center;
+}

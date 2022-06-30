@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <h1>This is for all pages and more</h1>
+      {/* <h1>This is for all pages and more</h1> */}
       <Component {...pageProps} />
     </div>
   );
