@@ -1,27 +1,15 @@
 import { Typography } from "@mui/material";
 import React from "react";
+import SectionHeader from "../section_header/section_header";
 import ServiceChoice from "../service_choice/service_choice";
 import styles from "./services.module.css";
 
 const Services = () => {
   return (
     <div>
-      <Typography
-        fontFamily="Poppins"
-        fontWeight="bold"
-        sx={{ color: "#0EE8B2", display: "flex", alignItems: "center" }}
-      >
-        Our Services
-        <div
-          style={{
-            backgroundColor: "#0EE8B2",
-            width: "31.5px",
-            height: "3px",
-            marginLeft: "10px",
-          }}
-        ></div>
-      </Typography>
-      <Typography fontFamily="Poppins" fontWeight="bold" variant="h5">
+      <SectionHeader title="Our Services" />
+
+      <Typography fontFamily="Poppins" fontWeight="bold" variant="h5" mt="6px">
         Explore Our Services
       </Typography>
       <div className={styles.grid}>

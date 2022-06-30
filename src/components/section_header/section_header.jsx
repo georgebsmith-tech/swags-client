@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 
 const SectionHeader = ({ title, color }) => {
   return (
-    <div>
+    <div style={{ display: "flex", alignItems: "center" }}>
       <Typography
         fontFamily="Poppins"
         fontWeight="bold"
@@ -14,15 +14,15 @@ const SectionHeader = ({ title, color }) => {
         }}
       >
         {title}
-        <div
-          style={{
-            backgroundColor: color ? color : "#0EE8B2",
-            width: "31.5px",
-            height: "3px",
-            marginLeft: "10px",
-          }}
-        ></div>
       </Typography>
+      <div
+        style={{
+          backgroundColor: color ? color : "#0EE8B2",
+          width: "31.5px",
+          height: "3px",
+          marginLeft: "10px",
+        }}
+      ></div>
     </div>
   );
 };

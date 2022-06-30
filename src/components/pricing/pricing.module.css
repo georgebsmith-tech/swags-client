@@ -1,0 +1,13 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0 97%);
+    clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0 98%);
+    box-shadow: 10px 10px 31px rebeccapurple;
+    background-color: aqua;
+
+    width: 329px;
+    height: 512px;
+
+}

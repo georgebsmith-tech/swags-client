@@ -1,5 +1,6 @@
 .grid {
     display: grid;
     grid-template-columns: auto auto;
+    margin-top: 34px;
     /* background-color: grey; */
 }

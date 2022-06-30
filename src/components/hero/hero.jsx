@@ -1,7 +1,8 @@
 import { Button, Typography } from "@mui/material";
+import { style } from "@mui/system";
 import React from "react";
+import CustomBtn from "../customBtn/customBtn";
 import styles from "./hero.module.css";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 const Hero = () => {
   return (
@@ -31,20 +32,7 @@ const Hero = () => {
         got you covered
       </Typography>
       <div className={styles.btngroup}>
-        <Button
-          variant="contained"
-          sx={{
-            // width: 200,
-            backgroundColor: "#000000",
-            color: "whitesmoke",
-            // height: 63,
-            borderRadius: 60,
-            padding: "16px 28px",
-          }}
-          // fontSize={14}
-        >
-          Quick Laundry
-        </Button>
+        <CustomBtn></CustomBtn>
         <Button
           color="primary"
           sx={{
@@ -55,11 +43,11 @@ const Hero = () => {
             borderRadius: "50%",
           }}
         >
-          <img src="./images/play-btn.svg" alt="" />
+          <img src="./images/play-btn.svg" alt="landing page" />
         </Button>
       </div>
       <div>
-        <img src="./images/Group87.png" alt="" />
+        <img src="./images/Group87.png" alt="" width="100%" />
       </div>
     </div>
   );
