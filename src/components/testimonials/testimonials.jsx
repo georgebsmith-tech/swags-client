@@ -1,6 +1,8 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import SectionHeader from "../section_header/section_header";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
+import ArrowCircleLefttOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 import styles from "./testimonials.module.css";
 
 const Testimonials = () => {
@@ -11,7 +13,7 @@ const Testimonials = () => {
         What Our Customers <br /> Are Saying!
       </Typography>
       <div className={styles.imgholder}>
-        <img src="./images/Group 90.png" alt="" />
+        <img src="./images/Group 90.png" alt="" width="100%" />
         <div className={styles.textholder}>
           <Typography
             fontFamily="Poppins"
@@ -46,6 +48,14 @@ const Testimonials = () => {
             <img src="./images/stars.svg" alt="" />
           </div>
         </div>
+      </div>
+      <div className={styles.nav}>
+        <IconButton variant="contained" color="primary" fontSize="large">
+          <ArrowCircleLefttOutlinedIcon fontSize="large" />
+        </IconButton>
+        <IconButton color="primary" fontSize="large">
+          <ArrowCircleRightOutlinedIcon fontSize="large" />
+        </IconButton>
       </div>
     </div>
   );

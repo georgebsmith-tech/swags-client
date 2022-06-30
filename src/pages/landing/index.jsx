@@ -7,6 +7,8 @@ import About from "../../components/about/about";
 import Services from "../../components/services/services";
 import WhyUs from "../../components/why_us/why_us";
 import Testimonials from "../../components/testimonials/testimonials";
+import HowWork from "../../components/how_work/howWork";
+import Pricing from "../../components/pricing/pricing";
 
 const Landing = () => {
   return (
@@ -26,6 +28,12 @@ const Landing = () => {
       </Container>
       <Container style={{ borderTop: "106px" }}>
         <Testimonials />
+      </Container>
+      <Container>
+        <HowWork />
+      </Container>
+      <Container>
+        <Pricing />
       </Container>
     </>
   );
