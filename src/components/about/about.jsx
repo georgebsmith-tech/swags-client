@@ -8,8 +8,8 @@ import SectionHeader from "../section_header/section_header";
 const About = () => {
   return (
     <div>
-      <SectionHeader title="About Us" />
 
+      <SectionHeader title="About Us" />
       <Typography fontFamily="Poppins" fontWeight="bold" variant="h5">
         Customer Centric <br />
         Laundry Company.
