@@ -30,7 +30,13 @@ const Landing = () => {
       <Container style={{ borderTop: "106px" }}>
         <Testimonials />
       </Container>
-      <Container>
+      <Container
+        style={{
+          background: "#DDE5F7",
+          clipPath: "polygon(0 0, 100% 3%, 100% 100%, 0% 100%)",
+          WebkitClipPath: "polygon(0 0, 100% 3%, 100% 100%, 0% 100%)",
+        }}
+      >
         <HowWork />
       </Container>
       <Container>
