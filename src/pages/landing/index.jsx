@@ -9,6 +9,7 @@ import WhyUs from "../../components/why_us/why_us";
 import Testimonials from "../../components/testimonials/testimonials";
 import HowWork from "../../components/how_work/howWork";
 import Pricing from "../../components/pricing/pricing";
+import ContactUs from "../../components/contact_us/contactUs";
 
 const Landing = () => {
   return (
@@ -34,6 +35,9 @@ const Landing = () => {
       </Container>
       <Container>
         <Pricing />
+      </Container>
+      <Container>
+        <ContactUs />
       </Container>
     </>
   );

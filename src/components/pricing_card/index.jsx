@@ -48,7 +48,7 @@ export const PricingCard = ({ title, subtitle, content, image }) => {
         style={{
           backgroundColor: "white",
           color: "black",
-          padding: "15px 64px",
+          //   padding: "15px 64px",
           marginTop: "52px",
           marginBottom: "66px",
         }}
