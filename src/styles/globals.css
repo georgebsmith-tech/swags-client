@@ -20,3 +20,14 @@ a {
 ul {
   list-style-type: none;
 }
+
+/* for tab menu */
+.MuiTabs-indicator {
+  background-color: #0FD7B5;
+  color: white;
+}
+
+.Mui-selected {
+  color: #fff !important;
+  background: #0FD7B5;
+}
