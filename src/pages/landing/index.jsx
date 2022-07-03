@@ -42,7 +42,13 @@ const Landing = () => {
       <Container>
         <Pricing />
       </Container>
-      <Container>
+      <Container
+        style={{
+          background: "#DDE5F7",
+          clipPath: "polygon(0 8%, 100% 0, 100% 100%, 0% 100%)",
+          WebkitClipPath: "polygon(0 8%, 100% 0, 100% 100%, 0% 100%)",
+        }}
+      >
         <ContactUs />
       </Container>
     </>

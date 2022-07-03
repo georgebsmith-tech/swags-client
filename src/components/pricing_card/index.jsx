@@ -3,6 +3,7 @@ import { Typography } from "@mui/material";
 import SectionHeader from "../section_header/section_header";
 import styles from "./index.module.css";
 import CustomBtn from "../customBtn/customBtn";
+import Container from "../container";
 
 export const PricingCard = ({ title, subtitle, content, image }) => {
   return (
@@ -28,7 +29,9 @@ export const PricingCard = ({ title, subtitle, content, image }) => {
       >
         {subtitle || "Silver Package"}
       </Typography>
-      <hr />
+      <div
+        style={{ background: "#7070703B", height: "1.5px", width: "100%" }}
+      />
       <div className={styles.contents}>
         {content.map((item, id) => (
           <Typography

@@ -22,17 +22,20 @@ const Pricing = () => {
       </Typography>
       <div className={styles.tabs}>
         <TabContext value={value}>
-          <Box sx={{ border: 1, borderColor: "#0FD7B5" }}>
+          <Box sx={{ border: 1, borderColor: "#0FD7B5", width: "100%" }}>
             <TabList
               onChange={handleChange}
               aria-label="lab API tabs example"
               variant="fullWidth"
+              visibleScrollbar="true"
+              sx={{ padding: "0", margin: "0" }}
             >
               <Tab label="Weekly" value="1" />
               <Tab label="Monthly" value="2" />
               <Tab label="Yearly" value="3" />
             </TabList>
           </Box>
+
           <TabPanel value="1">
             <PricingCard
               title="$30/Week"

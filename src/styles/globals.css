@@ -31,3 +31,9 @@ ul {
   color: #fff !important;
   background: #0FD7B5;
 }
+
+/* for form text field */
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+  /* font-size: 11px; */
+  color: #6E6E6E;
+}

@@ -12,7 +12,9 @@
 
 }
 
-.MuiTabs-indicator {
-    background-color: #0FD7B5;
-    color: white;
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
