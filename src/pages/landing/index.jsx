@@ -10,6 +10,7 @@ import Testimonials from "../../components/testimonials/testimonials";
 import HowWork from "../../components/how_work/howWork";
 import Pricing from "../../components/pricing/pricing";
 import ContactUs from "../../components/contact_us/contactUs";
+import Schedule from "../../components/schedule_laundry/schedule";
 
 const Landing = () => {
   return (
@@ -51,6 +52,7 @@ const Landing = () => {
       >
         <ContactUs />
       </Container>
+      <Schedule />
     </>
   );
 };
