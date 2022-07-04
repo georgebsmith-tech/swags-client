@@ -1,0 +1,28 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 52.3px; */
+    padding: 0 25px;
+    border: 1px solid #7070703B;
+    border-radius: 15px;
+
+}
+
+.imageHolder {
+    background-color: black;
+    width: 116px;
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 62px;
+}
+
+.contents {
+    /* text-align: left; */
+    /* border: red 2px solid; */
+    align-self: flex-start;
+}

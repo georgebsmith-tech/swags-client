@@ -9,6 +9,8 @@ import WhyUs from "../../components/why_us/why_us";
 import Testimonials from "../../components/testimonials/testimonials";
 import HowWork from "../../components/how_work/howWork";
 import Pricing from "../../components/pricing/pricing";
+import ContactUs from "../../components/contact_us/contactUs";
+import Schedule from "../../components/schedule_laundry/schedule";
 
 const Landing = () => {
   return (
@@ -29,12 +31,28 @@ const Landing = () => {
       <Container style={{ borderTop: "106px" }}>
         <Testimonials />
       </Container>
-      <Container>
+      <Container
+        style={{
+          background: "#DDE5F7",
+          clipPath: "polygon(0 0, 100% 3%, 100% 100%, 0% 100%)",
+          WebkitClipPath: "polygon(0 0, 100% 3%, 100% 100%, 0% 100%)",
+        }}
+      >
         <HowWork />
       </Container>
       <Container>
         <Pricing />
       </Container>
+      <Container
+        style={{
+          background: "#DDE5F7",
+          clipPath: "polygon(0 8%, 100% 0, 100% 100%, 0% 100%)",
+          WebkitClipPath: "polygon(0 8%, 100% 0, 100% 100%, 0% 100%)",
+        }}
+      >
+        <ContactUs />
+      </Container>
+      <Schedule />
     </>
   );
 };

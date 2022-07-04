@@ -21,42 +21,8 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          {/* <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1> */}
-          <Container background={"#1B55CA"}>
-            <Landing></Landing>
-          </Container>
-          <Container style={{ borderTop: "106px" }}>
-            <About />
-          </Container>
-          <Container style={{ borderTop: "106px" }}>
-            <Services />
-          </Container>
-          <Container style={{ borderTop: "106px", background: "#DDE5F7" }}>
-            <WhyUs />
-          </Container>
+          <Landing />
         </main>
-        <Container style={{ borderTop: "0", background: "red" }}>
-          <footer className={styles.footer}>
-            <h1>to God be</h1>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Powered by{" "}
-              <span className={styles.logo}>
-                <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
-                  width={72}
-                  height={16}
-                />
-              </span>
-            </a>
-          </footer>
-        </Container>
       </div>
     </div>
   );
