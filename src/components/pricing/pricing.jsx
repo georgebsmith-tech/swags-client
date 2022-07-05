@@ -27,7 +27,7 @@ const Pricing = () => {
               onChange={handleChange}
               aria-label="lab API tabs example"
               variant="fullWidth"
-              visibleScrollbar="true"
+              visibleScrollbar={true}
               sx={{ padding: "0", margin: "0" }}
             >
               <Tab label="Weekly" value="1" />

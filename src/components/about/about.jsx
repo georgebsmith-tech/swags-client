@@ -8,7 +8,6 @@ import SectionHeader from "../section_header/section_header";
 const About = () => {
   return (
     <div>
-
       <SectionHeader title="About Us" />
       <Typography fontFamily="Poppins" fontWeight="bold" variant="h5">
         Customer Centric <br />
@@ -61,6 +60,7 @@ const About = () => {
       <Typography
         fontFamily="Poppins"
         mt="23px"
+        mb="36px"
         fontWeight="bold"
         variant="subtitle"
         sx={{ display: "flex", columnGap: "23px" }}

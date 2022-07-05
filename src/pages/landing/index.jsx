@@ -11,6 +11,8 @@ import HowWork from "../../components/how_work/howWork";
 import Pricing from "../../components/pricing/pricing";
 import ContactUs from "../../components/contact_us/contactUs";
 import Schedule from "../../components/schedule_laundry/schedule";
+import Blog from "../../components/blog/blog";
+import Footer from "../../components/footer/footer";
 
 const Landing = () => {
   return (
@@ -53,6 +55,10 @@ const Landing = () => {
         <ContactUs />
       </Container>
       <Schedule />
+      <Container>
+        <Blog />
+      </Container>
+      <Footer />
     </>
   );
 };

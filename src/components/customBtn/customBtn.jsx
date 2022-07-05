@@ -9,11 +9,14 @@ const CustomBtn = ({ style, children }) => {
         backgroundColor: "#000000",
         color: "whitesmoke",
         fontFamily: "Poppins",
-        fontSize: "16px",
+        fontSize: "14px",
         textTransform: "capitalize",
-        // height: 63,
+        maxWidth: "182px",
+        maxHeight: "51px",
         borderRadius: 60,
-        padding: "18px 42px",
+        // padding: "18px 42px",
+        padding: "18px 20px",
+        lineHeight: "21px",
         ...style,
       }}
       // fontSize={14}
