@@ -1,4 +1,12 @@
 .parentWhy {
-    background-color: #FFFFFF;
-    border: red solid 2px;
+    background-color: rgba(255, 255, 255, 0.58);
+    /* border: red solid 2px; */
+    padding: 42px 17px;
+    border-radius: 11px;
+    /* opacity: 0.58; */
+    margin-bottom: 28px;
+}
+
+.main {
+    padding-bottom: 170px;
 }

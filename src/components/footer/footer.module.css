@@ -1,0 +1,7 @@
+.parent {
+    background-color: #01111D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 71px;
+}

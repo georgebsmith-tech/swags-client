@@ -1,6 +1,13 @@
 .container {
+  box-sizing: border-box;
+  padding: 2em 0.6em;
+}
+
+@media screen and (min-width:348px) {
+  .container {
     box-sizing: border-box;
     padding: 2em 1.6em;
-    width: 375px;
-    position: relative;
+    /* width: 20px; */
+    /* background-color: blue; */
+  }
 }

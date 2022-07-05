@@ -17,7 +17,8 @@ const Navbar = () => {
           SWAGS
         </Typography>
       </div>
-      <div className={styles.child2}>
+          <div className={styles.child2}>
+              
         <img src="./images/icons.svg" alt="menu" />
       </div>
     </div>

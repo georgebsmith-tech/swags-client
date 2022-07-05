@@ -12,6 +12,7 @@ const ServiceChoice = ({ image, title }) => {
         variant="subtitle2"
         color="#535353"
         mt="10px"
+        mb="35px"
         fontSize="12px"
       >
         {title}

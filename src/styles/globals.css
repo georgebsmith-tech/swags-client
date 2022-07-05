@@ -13,4 +13,27 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* for tab menu */
+.MuiTabs-indicator {
+  background-color: #0FD7B5;
+  color: white;
+}
+
+.Mui-selected {
+  color: #fff !important;
+  background: #0FD7B5;
+}
+
+/* for form text field */
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+  /* font-size: 11px; */
+  color: #6E6E6E;
 }
