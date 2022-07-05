@@ -8,26 +8,7 @@ import SectionHeader from "../section_header/section_header";
 const About = () => {
   return (
     <div>
-<<<<<<< HEAD
-      hello
-      <Typography
-        fontFamily="Poppins"
-        fontWeight="bold"
-        sx={{ color: "#0EE8B2", display: "flex", alignItems: "center" }}
-      >
-        About Us
-        <div
-          style={{
-            backgroundColor: "#0EE8B2",
-            width: "31.5px",
-            height: "3px",
-            marginLeft: "10px",
-          }}
-        ></div>
-      </Typography>
-=======
       <SectionHeader title="About Us" />
->>>>>>> clement
       <Typography fontFamily="Poppins" fontWeight="bold" variant="h5">
         Customer Centric <br />
         Laundry Company.
