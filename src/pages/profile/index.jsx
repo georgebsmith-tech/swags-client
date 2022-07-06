@@ -1,20 +1,29 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Index.module.css";
+import NavbarDashboard from "../../components/navbar_dashboard/navbarDashboard";
+import { Typography } from "@mui/material";
 
 export default function index() {
   return (
     <main style={{ padding: "0 25px" }}>
+      <NavbarDashboard />
       <section>
         <div>
-          <p>
+          <Typography
+            fontFamily="Poppins"
+            fontWeight="normal"
+            variant="h6"
+            color="black"
+            mb="24px"
+          >
             <span>Welcome!</span>{" "}
-            <span style={{ color: "#000000" }}>Smith</span>
-          </p>
-          <p>
+            <span style={{ color: "#000000", fontWeight: "bold" }}>Smith</span>
+          </Typography>
+          <Typography mb="51px" sx={{ color: "#5E5E5E" }}>
             Let's get you started by ordering a quick laundry or perhaps a
             schedule your laundry.
-          </p>
+          </Typography>
         </div>
       </section>
       <section>

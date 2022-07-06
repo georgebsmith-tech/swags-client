@@ -6,20 +6,22 @@ const Navbar = () => {
   return (
     <div className={styles.navParent}>
       <div className={styles.child1}>
+        <div className={styles.imagebox}>
+          <img src="./images/menuS.svg" alt="logo" width="100%" />
+        </div>
         <Typography
           variant="h2"
           fontFamily="Poppins"
           fontSize="19px"
           fontWeight="bold"
           color="white"
+          ml="10px"
         >
-          <img src="./images/icons-1.svg" alt="logo" />
           SWAGS
         </Typography>
       </div>
-          <div className={styles.child2}>
-              
-        <img src="./images/icons.svg" alt="menu" />
+      <div className={styles.child2}>
+        <img src="./images/menuS.svg" alt="menu" width="100%" />
       </div>
     </div>
   );
