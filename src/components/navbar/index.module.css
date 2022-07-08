@@ -1,10 +1,15 @@
 .navParent {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     height: 27px;
     /* border: red 2px solid; */
     height: fit-content;
+    position: sticky;
+    top: 0;
+    background: #1B55CA;
+    z-index: 2;
 }
 
 .child1 img {
@@ -35,4 +40,62 @@
 .child2>img {
     transform: rotate(180deg);
     /* transform: scaleY(-1); */
+}
+
+.sideParent {
+    position: absolute;
+    top: 0;
+    right: 0em;
+    /* background-color: white; */
+    border: yellow 2px solid;
+    /* width: calc(100% + 4em); */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    /* z-index: 1; */
+}
+
+.sidecontainer {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1B55CA;
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.item {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Poppins";
+    color: white;
+
+}
+
+.item:hover {
+    color: black;
+}
+
+.item:hover::after {
+    content: " ";
+    width: 3.5ch;
+    background-color: #0EE8B2;
+
+    position: absolute;
+    height: 3px;
+    bottom: -2px;
+    border-radius: 20px;
+    left: 56px;
+
 }

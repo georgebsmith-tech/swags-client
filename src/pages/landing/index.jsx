@@ -18,8 +18,8 @@ import Dashboard from "../dashboard1";
 const Landing = () => {
   return (
     <>
+      <Navbar />
       <Container background={"#1B55CA"}>
-        <Navbar />
         <Hero />
       </Container>
       <Container style={{ borderTop: "106px" }}>
