@@ -13,7 +13,7 @@ import ContactUs from "../../components/contact_us/contactUs";
 import Schedule from "../../components/schedule_laundry/schedule";
 import Blog from "../../components/blog/blog";
 import Footer from "../../components/footer/footer";
-import Dashboard from "../dashboard1";
+
 
 const Landing = () => {
   return (

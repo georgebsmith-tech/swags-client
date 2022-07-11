@@ -22,9 +22,9 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <UseSideToggle>
-            <Landing />
-          </UseSideToggle>
+          {/* <UseSideToggle> */}
+          <Landing />
+          {/* </UseSideToggle> */}
         </main>
       </div>
     </div>

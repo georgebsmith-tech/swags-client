@@ -3,11 +3,13 @@ import Link from "next/link";
 import styles from "./Index.module.css";
 import NavbarDashboard from "../../components/navbar_dashboard/navbarDashboard";
 import { Typography } from "@mui/material";
+import Sidebar from "../../components/navbar/sidebar";
 
 export default function index() {
   return (
     <main style={{ padding: "0 25px" }}>
       <NavbarDashboard />
+      <Sidebar />
       <section>
         <div>
           <Typography

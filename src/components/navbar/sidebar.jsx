@@ -1,16 +1,16 @@
 import React from "react";
 import { useContext, useRef, useEffect } from "react";
-import { SideNavContext, ToggleContext } from "./useSideToggle";
+import { SideNavContext } from "./useSideToggle";
 import styles from "./index.module.css";
 const Sidebar = () => {
   //using context api for toggling show
-  const show = useContext(SideNavContext);
-  const toggleShow = useContext(ToggleContext);
+  const { show, setShow } = useContext(SideNavContext);
+
   const navRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
-        toggleShow(false);
+        setShow(false);
         // alert("just clicked");
       }
     };
@@ -18,7 +18,7 @@ const Sidebar = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [toggleShow]);
+  }, [setShow]);
   const content = (
     <div className={styles.sideParent}>
       <div ref={navRef} className={styles.sidecontainer}>

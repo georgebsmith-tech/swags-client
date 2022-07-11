@@ -1,18 +1,16 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-const SideNavContext = createContext();
-const ToggleContext = createContext();
+const SideNavContext = createContext({});
+// const ToggleContext = createContext();
 
 function UseSideToggle({ children }) {
   // toggle for cart
   const [show, setShow] = useState(false);
   return (
-    <SideNavContext.Provider value={show}>
-      <ToggleContext.Provider value={setShow}>
-        <div>{children}</div>
-      </ToggleContext.Provider>
+    <SideNavContext.Provider value={{ show, setShow }}>
+      <div>{children}</div>
     </SideNavContext.Provider>
   );
 }
 
-export { UseSideToggle, SideNavContext, ToggleContext };
+export { UseSideToggle, SideNavContext };

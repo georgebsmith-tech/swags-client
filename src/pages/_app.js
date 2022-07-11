@@ -15,9 +15,9 @@ function MyApp({ Component, pageProps }) {
         ></link>
       </Head>
       {/* <h1>This is for all pages and more</h1> */}
-      {/* <UseSideToggle> */}
-      <Component {...pageProps} />
-      {/* </UseSideToggle> */}
+      <UseSideToggle>
+        <Component {...pageProps} />
+      </UseSideToggle>
     </div>
   );
 }
