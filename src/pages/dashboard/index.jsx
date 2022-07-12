@@ -39,25 +39,29 @@ export default function index() {
               title: "Quick Laundry",
               bg: "#FDE2EB96",
               image: <LocalLaundryServiceIcon />,
+              hrev: "/quickLaundry",
             },
             {
               title: "My Schedules",
               bg: "#E0EAF4",
               image: <CalendarMonthIcon />,
+              hrev: "/",
             },
             {
               title: "Quick Laundry",
               bg: "#EFECE1",
               image: <TimerOutlinedIcon />,
+              hrev: "/",
             },
             {
               title: "My Schedules",
               bg: "#E1EFE4",
               image: <ShoppingBasketOutlinedIcon />,
+              hrev: "/",
             },
           ].map((section, idx) => (
             <li key={idx}>
-              <Link href="#">
+              <Link href={section.hrev}>
                 <a
                   style={{
                     padding: "41px 34px",

@@ -53,17 +53,18 @@ const Sidebar = () => {
           }}
         >
           {[
-            { title: "Home", image: <HomeIcon sx={hover} /> },
+            { title: "Home", image: <HomeIcon sx={hover} />, hrev: "/" },
             {
               title: "Profile",
               image: <PersonIcon sx={{ "&:hover": { color: "red" } }} />,
+              hrev: "/dashboard",
             },
-            { title: "Message", image: <MessageIcon /> },
-            { title: "Notification", image: <NotificationsIcon /> },
-            { title: "Pick A Plan", image: <LocalOfferIcon /> },
+            { title: "Message", image: <MessageIcon />, hrev: "/" },
+            { title: "Notification", image: <NotificationsIcon />, hrev: "/" },
+            { title: "Pick A Plan", image: <LocalOfferIcon />, hrev: "/" },
           ].map((section, idx) => (
             <li key={idx}>
-              <Link href="/#">
+              <Link href={section.hrev}>
                 <a className={styles.item}>
                   {section.image} {section.title}
                 </a>

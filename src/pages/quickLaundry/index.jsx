@@ -3,7 +3,8 @@ import Container from "../../components/container";
 import Sidebar from "../../components/navbar/sidebar";
 import NavbarDashboard from "../../components/navbar_dashboard/navbarDashboard";
 import styles from "./quickLaundry.module.css";
-import { Tab, Box } from "@mui/material";
+import Button from "@mui/material/Button";
+import { Tab, Box, ButtonGroup } from "@mui/material";
 import { TabPanel, TabContext, TabList } from "@mui/lab";
 import { useState } from "react";
 import Radio from "@mui/material/Radio";
@@ -15,37 +16,62 @@ import {
   InputLabel,
   OutlinedInput,
   Input,
-  Button,
   FormControl,
   FormHelperText,
   TextField,
 } from "@mui/material";
 
 const QuickLaundry = () => {
+  const [counter, setCounter] = useState(0);
   const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const currencies = [
+  const options = [
     {
-      value: "USD",
+      value: "Home",
       label: "Home",
     },
     {
-      value: "EUR",
+      value: "Office",
       label: "Office",
     },
     {
-      value: "BTC",
+      value: "Church",
       label: "Church",
     },
     {
-      value: "JPY",
+      value: "School",
       label: "School",
     },
   ];
+
+  const options2 = [
+    {
+      value: "pick service",
+      label: "Pick Service",
+    },
+    {
+      value: "Office",
+      label: "Office",
+    },
+    {
+      value: "Church",
+      label: "Church",
+    },
+    {
+      value: "School",
+      label: "School",
+    },
+  ];
+
+  const [currency, setCurrency] = useState("EUR");
+
+  const handleChangeSelect = (event) => {
+    setCurrency(event.target.value);
+  };
 
   const customStyle = {
     // color: "black",
@@ -58,11 +84,6 @@ const QuickLaundry = () => {
     "&:focus": { color: "#1B55CA", fontSize: "16px", fontWeight: "bold" },
   };
 
-  const [currency, setCurrency] = useState("EUR");
-
-  const handleChangeSelect = (event) => {
-    setCurrency(event.target.value);
-  };
   return (
     <div className={styles.parent}>
       <Container style={{ paddingTop: "0px", paddingBottom: "0px" }}>
@@ -134,7 +155,7 @@ const QuickLaundry = () => {
                         native: true,
                       }}
                     >
-                      {currencies.map((option) => (
+                      {options.map((option) => (
                         <option key={option.value} value={option.value}>
                           {option.label}
                         </option>
@@ -186,7 +207,71 @@ const QuickLaundry = () => {
               </form>
             </TabPanel>
             <TabPanel value="2">
-              <p>hello 2</p>
+              <form action="#">
+                <FormControl>
+                  <TextField
+                    label="Enter Laundry Title"
+                    size="small"
+                    margin="normal"
+                  />
+                </FormControl>
+                <FormGroup>
+                  <FormControl>
+                    <TextField label="Your Item" size="small" margin="normal" />
+                  </FormControl>
+                  <FormGroup row>
+                    <FormControl sx={{ width: "55%" }}>
+                      <TextField
+                        size="small"
+                        // margin="normal"
+                        // id="outlined-select-currency-native"
+                        select
+                        // label="Home"
+                        value={currency}
+                        onChange={handleChangeSelect}
+                        SelectProps={{
+                          native: true,
+                        }}
+                      >
+                        {options2.map((option) => (
+                          <option key={option.value} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </TextField>
+                    </FormControl>
+                    <FormControl sx={{ width: "40%", marginLeft: "5%" }}>
+                      <ButtonGroup sx={{ width: "100%" }}>
+                        <Button
+                          sx={{ width: "33%", padding: "5px 0px" }}
+                          onClick={() => setCounter(counter + 1)}
+                        >
+                          +
+                        </Button>
+                        <TextField
+                          // label="Pick Service"
+                          // variant="contained"
+                          disabled
+                          size="small"
+                          value={counter}
+                          // width="5px"
+                          sx={{ width: "33%", padding: "0px" }}
+                          // margin="normal"
+                        />
+
+                        <Button
+                          sx={{ width: "33%" }}
+                          onClick={() => {
+                            counter > 0 ? setCounter(counter - 1) : 0;
+                          }}
+                        >
+                          -
+                        </Button>
+                      </ButtonGroup>
+                    </FormControl>
+                  </FormGroup>
+                </FormGroup>
+              </form>
             </TabPanel>
           </TabContext>
         </div>

@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     background: #1B55CA;
-    z-index: 2;
+    z-index: 1;
 }
 
 .child1 img {
