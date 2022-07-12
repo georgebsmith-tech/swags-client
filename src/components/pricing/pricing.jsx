@@ -12,6 +12,18 @@ const Pricing = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const customStyle = {
+    // color: "red",
+    fontSize: "13px",
+    fontWeight: "bold",
+    // backgroundColor: "transparent",
+    // padding: "0px",
+    textTransform: "capitalize",
+    "&:focus": {
+      backgroundColor: "#0FD7B5",
+      color: "white",
+    },
+  };
 
   return (
     <div className={styles.parent}>
@@ -28,11 +40,11 @@ const Pricing = () => {
               aria-label="lab API tabs example"
               variant="fullWidth"
               visibleScrollbar={true}
-              sx={{ padding: "0", margin: "0" }}
+              sx={{ padding: "0", margin: "0", ...customStyle }}
             >
-              <Tab label="Weekly" value="1" />
-              <Tab label="Monthly" value="2" />
-              <Tab label="Yearly" value="3" />
+              <Tab label="Weekly" value="1" sx={customStyle} />
+              <Tab label="Monthly" value="2" sx={customStyle} />
+              <Tab label="Yearly" value="3" sx={customStyle} />
             </TabList>
           </Box>
 

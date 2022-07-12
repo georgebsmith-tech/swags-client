@@ -4,6 +4,10 @@ import styles from "./Index.module.css";
 import NavbarDashboard from "../../components/navbar_dashboard/navbarDashboard";
 import { Typography } from "@mui/material";
 import Sidebar from "../../components/navbar/sidebar";
+import LocalLaundryServiceIcon from "@mui/icons-material/LocalLaundryService";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
+import ShoppingBasketOutlinedIcon from "@mui/icons-material/ShoppingBasketOutlined";
 
 export default function index() {
   return (
@@ -31,22 +35,42 @@ export default function index() {
       <section>
         <ul className={styles.sectionWrapper}>
           {[
-            { title: "Quick Laundry", bg: "#FDE2EB96" },
-            { title: "My Schedules", bg: "red" },
-            { title: "Quick Laundry", bg: "#FDE2EB96" },
-            { title: "My Schedules", bg: "blue" },
+            {
+              title: "Quick Laundry",
+              bg: "#FDE2EB96",
+              image: <LocalLaundryServiceIcon />,
+            },
+            {
+              title: "My Schedules",
+              bg: "#E0EAF4",
+              image: <CalendarMonthIcon />,
+            },
+            {
+              title: "Quick Laundry",
+              bg: "#EFECE1",
+              image: <TimerOutlinedIcon />,
+            },
+            {
+              title: "My Schedules",
+              bg: "#E1EFE4",
+              image: <ShoppingBasketOutlinedIcon />,
+            },
           ].map((section, idx) => (
-            <li
-              key={idx}
-              style={{
-                padding: "41px 34px",
-                backgroundColor: section.bg,
-                borderRadius: 14,
-              }}
-            >
+            <li key={idx}>
               <Link href="#">
-                <a>
-                  <p>{section.title}</p>
+                <a
+                  style={{
+                    padding: "41px 34px",
+                    backgroundColor: section.bg,
+                    borderRadius: 14,
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "37px",
+                  }}
+                >
+                  {section.image}
+                  {section.title}
                 </a>
               </Link>
             </li>

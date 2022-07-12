@@ -23,13 +23,15 @@ ul {
 
 /* for tab menu */
 .MuiTabs-indicator {
-  background-color: #0FD7B5;
-  color: white;
+  /* background-color: #0FD7B5; */
+  /* line-height: 23px; */
+  /* color: white; */
 }
 
 .Mui-selected {
-  color: #fff !important;
-  background: #0FD7B5;
+  /* color: #fff !important; */
+  /* background: #0FD7B5; */
+
 }
 
 /* for form text field */
