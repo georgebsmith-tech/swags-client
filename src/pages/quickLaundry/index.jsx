@@ -20,9 +20,9 @@ import {
   FormHelperText,
   TextField,
 } from "@mui/material";
+import LaundryItem from "../../components/laundryItem/laundryItem";
 
 const QuickLaundry = () => {
-  const [counter, setCounter] = useState(0);
   const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
@@ -33,25 +33,6 @@ const QuickLaundry = () => {
     {
       value: "Home",
       label: "Home",
-    },
-    {
-      value: "Office",
-      label: "Office",
-    },
-    {
-      value: "Church",
-      label: "Church",
-    },
-    {
-      value: "School",
-      label: "School",
-    },
-  ];
-
-  const options2 = [
-    {
-      value: "pick service",
-      label: "Pick Service",
     },
     {
       value: "Office",
@@ -84,6 +65,24 @@ const QuickLaundry = () => {
     "&:focus": { color: "#1B55CA", fontSize: "16px", fontWeight: "bold" },
   };
 
+  // for laundry items
+  const [items, setItems] = useState([<LaundryItem />]);
+
+  const handleIncrement = () => {
+    setItems((items) => [...items, <LaundryItem />]);
+  };
+
+  const handleDecrement = (id) => {
+    setItems((items) =>
+      items.filter((item) => {
+        // console.log("item:", item);
+        // console.log("item index:", items.indexOf(item));
+        return items.indexOf(item) !== id;
+      })
+    );
+    // console.log("idx:", id);
+  };
+
   return (
     <div className={styles.parent}>
       <Container style={{ paddingTop: "0px", paddingBottom: "0px" }}>
@@ -105,8 +104,7 @@ const QuickLaundry = () => {
                 <Tab label="Laundry Items" value="2" sx={customStyle} />
               </TabList>
             </Box>
-
-            <TabPanel value="1">
+            <TabPanel value="1" sx={{ padding: "0px" }}>
               <form className={styles.forms} action="#">
                 <FormGroup>
                   {/* <FormGroup row> */}
@@ -135,7 +133,7 @@ const QuickLaundry = () => {
                     }}
                   >
                     <TextField
-                      id="demo-helper-text-misaligned-no-helper"
+                      // id="demo-helper-text-misaligned-no-helper"
                       label="Enter Your Pickup Address"
                       //   fullWidth
                       size="small"
@@ -206,71 +204,87 @@ const QuickLaundry = () => {
                 </FormGroup>
               </form>
             </TabPanel>
-            <TabPanel value="2">
+            <TabPanel value="2" sx={{ padding: "0px" }}>
               <form action="#">
-                <FormControl>
+                <FormControl fullWidth>
                   <TextField
                     label="Enter Laundry Title"
                     size="small"
                     margin="normal"
                   />
                 </FormControl>
-                <FormGroup>
-                  <FormControl>
-                    <TextField label="Your Item" size="small" margin="normal" />
-                  </FormControl>
-                  <FormGroup row>
-                    <FormControl sx={{ width: "55%" }}>
-                      <TextField
-                        size="small"
-                        // margin="normal"
-                        // id="outlined-select-currency-native"
-                        select
-                        // label="Home"
-                        value={currency}
-                        onChange={handleChangeSelect}
-                        SelectProps={{
-                          native: true,
+                {/* insert laundry item */}
+                {/* <LaundryItem /> */}
+                <ul>
+                  {items.map((item, idx) => (
+                    <li id={idx} className={styles.li}>
+                      {item}
+                      <Button
+                        onClick={() => handleDecrement(idx)}
+                        variant="contained"
+                        sx={{
+                          position: "absolute",
+                          top: "6px",
+                          left: "-6px",
+                          backgroundColor: "#707070",
+                          color: "whitesmoke",
+                          fontFamily: "Poppins",
+                          fontSize: "12px",
+                          textTransform: "capitalize",
+                          // lineHeight: "23px",
+                          letterSpacing: "0px",
+                          width: "20px",
+                          minWidth: "10px",
+                          height: "20px",
+                          borderRadius: "50%",
+                          padding: "0px",
                         }}
                       >
-                        {options2.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </TextField>
-                    </FormControl>
-                    <FormControl sx={{ width: "40%", marginLeft: "5%" }}>
-                      <ButtonGroup sx={{ width: "100%" }}>
-                        <Button
-                          sx={{ width: "33%", padding: "5px 0px" }}
-                          onClick={() => setCounter(counter + 1)}
-                        >
-                          +
-                        </Button>
-                        <TextField
-                          // label="Pick Service"
-                          // variant="contained"
-                          disabled
-                          size="small"
-                          value={counter}
-                          // width="5px"
-                          sx={{ width: "33%", padding: "0px" }}
-                          // margin="normal"
-                        />
-
-                        <Button
-                          sx={{ width: "33%" }}
-                          onClick={() => {
-                            counter > 0 ? setCounter(counter - 1) : 0;
-                          }}
-                        >
-                          -
-                        </Button>
-                      </ButtonGroup>
-                    </FormControl>
-                  </FormGroup>
-                </FormGroup>
+                        x
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+                <FormControl className={styles.buttons}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    // mb="106px"
+                    sx={{
+                      backgroundColor: "#000000",
+                      color: "whitesmoke",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      textTransform: "capitalize",
+                      // marginTop: "120px",
+                      // marginBottom: "56px",
+                      padding: "10px 69px",
+                      lineHeight: "23px",
+                      letterSpacing: "0px",
+                      // fontWeight: "light",
+                    }}
+                  >
+                    Book Laundry
+                  </Button>
+                  <Button
+                    onClick={handleIncrement}
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "#000000",
+                      color: "whitesmoke",
+                      fontFamily: "Poppins",
+                      fontSize: "40px",
+                      textTransform: "capitalize",
+                      lineHeight: "23px",
+                      letterSpacing: "0px",
+                      width: "54px",
+                      height: "54px",
+                      borderRadius: "50%",
+                    }}
+                  >
+                    +
+                  </Button>
+                </FormControl>
               </form>
             </TabPanel>
           </TabContext>
