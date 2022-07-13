@@ -1,0 +1,20 @@
+.buttons {
+    width: 100%;
+    display: flex;
+    margin: 54px auto;
+    flex-direction: row;
+    /* gap: 27px; */
+    justify-content: space-between;
+}
+
+.buttons button:first-child {
+    /* flex-grow: 1; */
+    /* border: red solid 2px; */
+    max-width: 239px;
+    max-height: 54px;
+}
+
+.li {
+    position: relative;
+    margin-bottom: 1em;
+}

@@ -14,11 +14,12 @@ import Schedule from "../../components/schedule_laundry/schedule";
 import Blog from "../../components/blog/blog";
 import Footer from "../../components/footer/footer";
 
+
 const Landing = () => {
   return (
     <>
+      <Navbar />
       <Container background={"#1B55CA"}>
-        <Navbar />
         <Hero />
       </Container>
       <Container style={{ borderTop: "106px" }}>
@@ -59,6 +60,7 @@ const Landing = () => {
         <Blog />
       </Container>
       <Footer />
+      {/* <Dashboard /> */}
     </>
   );
 };

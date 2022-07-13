@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import { UseSideToggle } from "../components/navbar/useSideToggle";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,7 +15,9 @@ function MyApp({ Component, pageProps }) {
         ></link>
       </Head>
       {/* <h1>This is for all pages and more</h1> */}
-      <Component {...pageProps} />
+      <UseSideToggle>
+        <Component {...pageProps} />
+      </UseSideToggle>
     </div>
   );
 }

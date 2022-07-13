@@ -1,0 +1,25 @@
+.parent {
+    display: flex;
+    justify-content: space-between;
+    margin: 37px 0;
+    z-index: 1;
+}
+
+.child2 {
+    /* width: 50%; */
+    display: flex;
+    column-gap: 20px;
+}
+
+.about {
+    display: flex;
+    column-gap: 14px;
+}
+
+.child1>img {
+    transform: scaleY(-1);
+}
+
+.child1 {
+    width: 30px;
+}
