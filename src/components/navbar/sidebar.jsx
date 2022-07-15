@@ -65,7 +65,7 @@ const Sidebar = () => {
           ].map((section, idx) => (
             <li key={idx}>
               <Link href={section.hrev}>
-                <a className={styles.item}>
+                <a className={styles.item} onClick={() => setShow(false)}>
                   {section.image} {section.title}
                 </a>
               </Link>

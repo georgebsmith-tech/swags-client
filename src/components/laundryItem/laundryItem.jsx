@@ -19,7 +19,6 @@ export default function LaundryItem({ add }) {
   const [val, setval] = useState("home");
   const [counter, setCounter] = useState(0);
 
-  const [items, setItems] = useState([]);
 
   const options2 = [
     {
