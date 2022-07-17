@@ -21,6 +21,7 @@ import {
   TextField,
 } from "@mui/material";
 import LaundryItem from "../../components/laundryItem/laundryItem";
+import LaundrySubmit from "../../components/laundrySubmit/laundrySubmit";
 
 const QuickLaundry = () => {
   const [value, setValue] = useState("1");
@@ -73,6 +74,7 @@ const QuickLaundry = () => {
   };
 
   const handleDecrement = (id) => {
+    console.log(id);
     setItems((items) =>
       items.filter((item) => {
         // console.log("item:", item);
@@ -83,12 +85,22 @@ const QuickLaundry = () => {
     // console.log("idx:", id);
   };
 
+  // for confirmed order show
+  const [isopen, setIsopen] = useState(false);
+  const handleOpen = (e) => {
+    e.preventDefault();
+    setIsopen(!isopen);
+    // console.log("clicked, isopen:", isopen);
+    // alert(`isopen: ${isopen}`);
+  };
+
   return (
     <div className={styles.parent}>
       <Container style={{ paddingTop: "0px", paddingBottom: "0px" }}>
         <NavbarDashboard />
       </Container>
       <Sidebar />
+      <LaundrySubmit isopen={isopen} setIsopen={setIsopen} />
       <Container style={{ paddingTop: "0px", paddingBottom: "0px" }}>
         <div className={styles.tabs}>
           <TabContext value={value}>
@@ -153,7 +165,7 @@ const QuickLaundry = () => {
                         native: true,
                       }}
                     >
-                      {options.map((option) => (
+                      {options.map((option, idx) => (
                         <option key={option.value} value={option.value}>
                           {option.label}
                         </option>
@@ -217,10 +229,10 @@ const QuickLaundry = () => {
                 {/* <LaundryItem /> */}
                 <ul>
                   {items.map((item, idx) => (
-                    <li id={idx} className={styles.li}>
+                    <li key={idx} className={styles.li}>
                       {item}
                       <Button
-                        onClick={() => handleDecrement(idx)}
+                        onClick={(e) => handleDecrement(e)}
                         variant="contained"
                         sx={{
                           position: "absolute",
@@ -249,6 +261,7 @@ const QuickLaundry = () => {
                   <Button
                     type="submit"
                     variant="contained"
+                    onClick={handleOpen}
                     // mb="106px"
                     sx={{
                       backgroundColor: "#000000",

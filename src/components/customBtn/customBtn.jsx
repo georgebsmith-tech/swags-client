@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
-const CustomBtn = ({ style, children }) => {
+const CustomBtn = ({ style, children, click }) => {
   return (
     <Button
       variant="contained"
+      onClick={() => click(false)}
       sx={{
         // width: 200,
         backgroundColor: "#000000",
